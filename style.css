@@ -1,0 +1,977 @@
+
+/*LANDING PAGE*/
+
+body{
+  background-color: #F6F4F2;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  background-color: #F6F4F2;
+  height: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+header,footer{
+width: 100%;
+margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  position: relative;
+}
+
+
+/*header*/
+
+.header-1{
+    background-color: #242222;
+    height: 32px;
+    left: 0px;
+}
+
+.header-1-button, .header-2-button{
+  float:left;
+  list-style-type: none;
+  margin-right: 15px;
+  position: relative;
+}
+
+.header-1-buttons{
+  margin:0;
+  padding-top: 5px;
+  float: right;
+}
+
+.header-2{
+    background-color: #1A1919;
+    height: 60px;
+    left: 0px;
+    top: 1px;
+    display:inherit;
+}
+
+.header-2-button::after {
+  content: "";
+  position: absolute;
+  bottom: -21px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #FFFFFF;
+  transition: width 0.3s ease;
+}
+
+.header-2-button:hover::after {
+  width: 100%;
+}
+
+.header-2-button:hover a {
+  color: #FFFFFF;
+}
+
+
+.rituals-logo{
+  float:left;
+  padding-top: 25px;
+  padding-left: 5%;
+}
+
+.header-2-right{
+  padding-top: 5px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-2-input{
+  position: relative;
+  padding-left: 10px;
+  height: 100%;
+  background-color: transparent;
+  border:none;
+  outline:none;
+}
+
+/*MAIN*/
+
+.title-photo{
+  width: fit-content;
+}
+
+
+.landing-page-container{
+  width: 100%;
+  height: auto;
+  display: block;
+  
+}
+
+.landing-page-logo{
+  position: absolute;
+  left: 77.42px;
+  top: 269.12px;
+}
+
+.landing-page-background{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.landing-page-text{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.landing-page-header-description{
+    position: absolute;
+    width: 556.87px;
+    height: 35.82px;
+    left: 77.42px;
+    top: 370px;
+    color: #FFFFFF;
+}
+
+.landing-page-header{
+    position: absolute;
+    width: 563.02px;
+    height: 99.28px;
+    left: 77.42px;
+    top: 390px;
+    color: #FFFFFF;
+}
+
+.landing-page-description{
+    position: absolute;
+    width: 557.75px;
+    height: 63.45px;
+    left: 77.42px;
+    top: 440px;
+    color: #FFFFFF;
+}
+
+.landing-page-button{
+  position: absolute;
+  left: 77.42px;
+  top: 520px;
+  text-align: center;
+}
+
+/*news*/
+
+.news-collection {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.news {
+  width: 45%;
+  height: 880px;
+}
+
+.news-background {
+  height: 320px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.news-header-1, .news-header-2, .news-text, .news-button{
+  text-align: center;
+  padding-top: 5%;
+}
+
+.news-button{
+  padding-right: 220px;
+}
+
+.news-picture {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  background-position: center;
+  position: absolute;
+  top: 320px;
+}
+
+
+
+/*footer*/
+
+.footer-1{
+  background-color: #242222;
+  height: 160px;
+  left: 0px;
+  top: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-1-content{
+  margin-top: 45px;
+    margin-left: 50px;
+}
+
+.footer-1-header{
+  padding-bottom: 2%;
+}
+
+.footer-1-text{
+  width: 70%;
+}
+
+.e-mail{
+  padding-top: 45px;
+    margin-right: 250px;
+}
+
+.e-mail-header{
+  margin-left: 5px;
+}
+
+.e-mail-input{
+  background-color: #242222;
+  border: 1px solid #b4b4b4;
+  width: 280px;
+  height: 41px;
+  margin-right: 10px; /* Abstand zwischen dem Eingabefeld und dem Button */
+  margin-left: 5px;
+}
+
+.footer-2{
+  background-color: #1A1919;
+  height: 300px;
+  left: 0px;
+  top: 1px;
+  padding-top: 3%;
+  padding-left: 5%;
+}
+
+.footer-2-header{
+  padding-bottom: 20px;
+}
+
+.footer-2-kundenhotline{
+  width: 25%
+}
+
+
+
+.footer-2-info, .footer-2-kundenhotline{
+  display: flex;
+}
+
+.footer-2-info{
+  width: 100%;
+}
+
+.footer-2-info{
+  align-items: inherit;
+  justify-content: space-between;
+}
+
+.footer-2-social-media{
+  padding-top: 100px;
+}
+
+.footer-2-logo{
+  padding-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.rituals-logo-2 {
+  margin-top:25px;
+  margin-right: 30px;
+   /* Füge hier den gewünschten Abstand ein */
+}
+/*-----------*/
+
+
+/*SHOP*/
+
+.sticky-section {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: #FCFAF7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-content {
+  display: flex;
+  margin-right: 380px;
+  align-items: center;
+}
+
+.sticky-content-left {
+  margin-left: 20px;
+  width:200px;
+}
+
+.sticky-content-right {
+  margin-right: 20px;
+  width:80px;
+  text-align: right;
+}
+
+.sticky-button {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+
+.shop-landing-page{
+  width: 100%;
+  height: auto;
+  display: flex;
+  background: #FCFAF7;
+}
+
+.back-button{
+  padding-left: 5%;
+}
+
+.shop-image-background{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background: #D6CECB;
+  width: 50%;
+}
+
+.shop-image{
+  margin-left: 40%;
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+.image{
+  width: 30%;
+}
+
+.shop-text-background{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.shop-text{
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  width: auto;
+  padding: 20% 20%;
+  margin: 0 auto;
+  height: 60%;
+}
+
+.shop-button{
+  justify-content: center;
+    display: flex;
+}
+
+.color-button {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.color-button-1:focus,
+.color-button-2:focus,
+.color-button-3:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px black;
+}
+
+.color-button-1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 80%;
+  background: #C08B89;
+  border: none;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.color-button-2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 80%;
+  background: #B38F75;
+  border: none;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.color-button-3 {
+  width: 20px;
+  height: 20px;
+  border-radius: 80%;
+  background: #BF9BAD;
+  border: none;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.shop-product-description{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-bottom: 100px;
+}
+
+.shop-product-description-text{
+  background: #EFE8E7;
+  padding: 20% 10%;
+  text-align: center;
+}
+
+.shop-product-description-img{
+  width: 100%;
+  height: 100%;
+}
+/*-----------*/
+
+/* PRODUCTS */
+
+.product {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+
+.product-header-1,
+.product-header-2,
+.product-text-1,
+.product-button {
+  padding-top: 10%;
+}
+
+.product-collection {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.card-btn {
+  display: flex;
+}
+
+.product-category {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.product-container {
+  display: flex;
+  padding-right: 5%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 590px;
+  margin-right: 40px;
+  scroll-snap-align: start;
+}
+
+.product-image {
+  background: #FCFAF7;
+  position: relative;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.product-thumb-1 {
+  width: 70%;
+  height: 40%;
+  margin-top: 40%;
+  margin-left: 15%;
+}
+.product-thumb-2 {
+  width: 40%;
+  margin-top: 25%;
+  margin-left: 30%;
+}
+.product-thumb-3 {
+  width: 70%;
+  height: 40%;
+  margin-top: 40%;
+  margin-left: 15%;
+}
+.product-thumb-4 {
+  width: 40%;
+  height: 80%;
+  margin-top: 12%;
+  margin-left: 30%;
+}
+
+.tag {
+  position: absolute;
+  background: #B4B4B4;
+  padding: 10px 20px 10px 20px;
+  border-radius: 0px 5px 5px 0px;
+  top: 70%;
+  text-transform: capitalize;
+}
+
+.product-content {
+  padding: 10%;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.price-content{
+  display: flex;
+}
+
+.price-text{
+  margin-top: 10px;
+}
+.card-btn {
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  z-index: 1;
+  margin-left: 100px;
+}
+
+.product-info {
+  width: 100%;
+  height: 40%;
+  background: #FFFFFF;
+}
+
+.product-short-description {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+
+.pre-btn,
+.nxt-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.product-collection:hover .pre-btn,
+.product-collection:hover .nxt-btn {
+  display: block;
+}
+
+.pre-btn {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+  /*Carousel*/
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    align-content: space-between;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s;
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  
+  
+  .slide-header {
+    align-items: center;
+  }
+  
+  .carousel-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .slide-button-1,
+  .slide-button-2,
+  .slide-button-3 {
+    width: 5px;
+    height: 10px;
+    border-radius: 80%;
+    background: #D9D9D9;
+    border: none;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .slide-button-1.active,
+  .slide-button-2.active,
+  .slide-button-3.active {
+    background: #443F3F;
+  }
+
+  
+  /*Image*/
+
+  .rituals-logo-2{
+    width: 54px;
+    height: 51px;
+  }
+
+  .social-media-logo{
+    width: 251px;
+    height: 51px;
+  }
+
+  .certificate-logo{
+    width: 58px;
+    height: 86px;
+  }
+
+/* Restlicher CSS-Stil */
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.icon {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-icon.open .icon {
+  transform: rotate(45deg);
+}
+
+.menu-icon.open .icon:before,
+.menu-icon.open .icon:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-icon.open .icon:before {
+  transform-origin: top left;
+}
+
+.menu-icon.open .icon:after {
+  transform-origin: bottom left;
+}
+
+.menu {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu.active {
+  display: block;
+  opacity: 1;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Responsive*/
+
+
+@media (min-width: 1441px) { /* Styles für Bildschirme mit einer Breite von 1441px oder mehr */
+  .container {
+    position: relative;
+    align-items: center;
+  }
+}
+
+
+
+@media (min-width: 991px) { /* Styles für Bildschirme mit einer Breite von 991px oder mehr */
+  .menu-icon {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 990px){/* Styles für Bildschirme mit einer Breite von 991px oder weniger */
+
+  .header-1{
+    display: none;
+  }
+
+  .header-2-right{
+    display:none;
+  }
+
+  .header-2{
+    display: flex;
+  }
+
+  .landing-page-background{
+    content:url(./Blender/Zylinder_hoch_3.png)
+  }
+
+  .news-collection{
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    padding-bottom: 70px;
+  }
+
+  .news{
+    width: 100%;
+    height: 760px;
+  }
+
+  .news-background{
+    height:380px
+  }
+
+  .news-picture{
+    top:350px;
+  }
+
+  .shop-landing-page{
+    display: grid;
+  }
+
+  .shop-image-background{
+    width: 100%;
+  }
+
+  .shop-text-background{
+    height: 500px;
+    width: 300px;
+  }
+
+  .shop-text{
+    padding: 0;
+    margin-top: 70px;
+  }
+
+  .pre-btn, .nxt-btn{
+    display: none !important;
+  }
+
+  .product-description{
+    margin-top: 100px;
+  }
+
+  .shop-product-description{
+    grid-template-columns: 100%;
+  }
+
+  .footer-1{
+    display: grid;
+    height: 280px;
+  }
+  
+  .e-mail{
+    margin-left: 43px;
+    margin-top: -50px;
+  }
+
+  .footer-2-kundenhotline {
+    width: 40%;
+}
+
+  .footer-2{
+    padding-left: 45px;
+  }
+
+}
+
+
+@media (max-width: 830px) {/* Styles für Bildschirme mit einer Breite von 830px oder weniger */
+  .sticky-section{
+    display: none;
+  }
+
+  .product{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .shop-product-description{
+    padding-bottom: 50px;
+  }
+
+  .shop-product-description-text {
+    background: #EFE8E7;
+    padding: 10% 10%;
+    text-align: center;
+}
+
+  .product-description{
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .product-text-1{
+    display: none;
+  }
+
+  .product-header-1{
+    padding-top: 0;
+  }
+
+  .product-header-2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .product-button{
+    display: none;
+  }
+  .fixedbutton{
+    display: none;
+  }
+
+  
+}
+
+@media (max-width: 610px){
+
+
+  .footer-1{
+    height: 450px;
+  }
+
+
+  .e-mail{
+    margin:0;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .button-darkgrey-border{
+    margin-top: 100px;
+    margin-left: 5px;
+  }
+
+  .e-mail-input{
+    width:213px;
+  }
+
+  .e-mail-header {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .footer-2{
+    display: grid;
+    grid-template-columns: 100%;
+    padding-left: 0;
+  }
+
+  .footer-2-hotline{
+    display: none;
+  }
+
+  .footer-2-social-media{
+    display: grid;
+    padding-top: 20px;
+    justify-content:center;
+  }
+
+  .footer-2-info{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 200px;
+  }
+
+  .footer-2-logo{
+    padding-top: 20px;
+    padding-right: 0;
+    justify-content:center;
+  }
+}
