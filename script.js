@@ -139,23 +139,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
   handleScroll();
 });
-
-
-
-
-/*Farb-Button*/
-
-function showImage(imageNumber) {
-  var images = document.getElementsByClassName('image');
-  for (var i = 0; i < images.length; i++) {
-    images[i].style.display = 'none';
-  }
-
-  var selectedImage = document.getElementById('image' + imageNumber);
-  selectedImage.style.display = 'block';
-  
-  var selectedButton = document.querySelector(".color-button-" + imageNumber);
-  selectedButton.focus();
-}
-
-
