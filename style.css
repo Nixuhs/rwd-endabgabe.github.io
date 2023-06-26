@@ -1041,7 +1041,7 @@ main {
     width: 100%;
     justify-content: center;
     display: flex;
-    margin-top: 29%;
+    margin-top: 30%;
     margin-left: 0;
   }
 
@@ -1049,7 +1049,7 @@ main {
     width: 100%;
     justify-content: center;
     display: flex;
-    margin-top: 43%;
+    margin-top: 45%;
     margin-left: 0 auto;
     text-align: center;
   }
@@ -1058,7 +1058,7 @@ main {
     width: 100%;
     justify-content: center;
     display: flex;
-    margin-top: 57%;
+    margin-top: 63%;
   }
 
   .rituals-logo{
@@ -1082,6 +1082,17 @@ main {
   .product-card{
     margin-right: 5px;
   }
+
+  .news {
+    height: 730px;
+}
+
+.news-background {
+  height: 300px;
+}
+.news-picture {
+  top: 300px;
+}
 
 
   .e-mail{
@@ -1110,10 +1121,6 @@ main {
     justify-content: center;
     margin: 0 auto;
   }
-
-
-
-  
 
   .footer-1{
     padding-left: 50px;
