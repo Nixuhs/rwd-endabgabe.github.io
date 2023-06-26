@@ -109,6 +109,39 @@ carouselContainer.addEventListener('mouseleave', startTimer);
 
 
 
+/*header*/
+
+function handleScroll() {
+  const header = document.querySelector(".header");
+  let lastScrollPosition = 0;
+
+  window.addEventListener("scroll", function() {
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollPosition <= lastScrollPosition) {
+      header.classList.add("active");
+    }else {
+      header.classList.remove("active");
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuIcon = document.querySelector(".menu-icon");
+  const menu = document.querySelector(".menu");
+
+  menuIcon.addEventListener("click", function() {
+    menu.classList.toggle("active");
+    menuIcon.classList.toggle("open");
+  });
+
+  handleScroll();
+});
+
+
+
 
 /*Farb-Button*/
 
@@ -126,34 +159,3 @@ function showImage(imageNumber) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  const menuIcon = document.querySelector(".menu-icon");
-  const menu = document.querySelector(".menu");
-
-  menuIcon.addEventListener("click", function() {
-    menu.classList.toggle("active");
-    menuIcon.classList.toggle("open");
-  });
-});
-
-
-/*header*/
-
-function handleScroll() {
-  const header = document.querySelector(".header");
-  let lastScrollPosition = 0;
-
-  window.addEventListener("scroll", function() {
-    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScrollPosition < lastScrollPosition) {
-      header.classList.add("active");
-    } else {
-      header.classList.remove("active");
-    }
-
-    lastScrollPosition = currentScrollPosition;
-  });
-}
-
-handleScroll();

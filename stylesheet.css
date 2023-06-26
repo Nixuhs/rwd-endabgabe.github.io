@@ -441,7 +441,15 @@
 /*responsive*/
 
 @media (min-width: 610px) {
-    .button-darkgrey-border{
-        position: absolute;
+.button-darkgrey-border{
+    position: absolute;
+}
+
+}
+
+@media (max-width:610px) {
+    .logo{
+        padding-left: 5px ;
+        padding-right: 5px;
     }
 }
