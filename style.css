@@ -63,6 +63,17 @@ main {
   float: right;
 }
 
+.menu-list{
+  list-style-type: none;
+  padding-bottom: 30px;
+}
+
+.menu-inner{
+  padding-top: 10px;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .header-2{
     background-color: #1A1919;
     height: 60px;
@@ -776,7 +787,7 @@ main {
   display: block;
   opacity: 1;
   animation: fade-in 0.3s ease-in-out;
-  height: 500px;
+  height: 400px;
   z-index: 3;
   background: #1A1919;
 }
@@ -864,7 +875,7 @@ main {
   }
 
   .landing-page-header-description{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
     margin-top: 19%;
@@ -872,7 +883,7 @@ main {
   }
 
   .landing-page-header{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
     margin-top: 22%;
@@ -880,7 +891,7 @@ main {
   }
 
   .landing-page-description{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
     margin-top: 32%;
@@ -888,7 +899,7 @@ main {
   }
 
   .landing-page-button{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
     margin-left: 42%;
@@ -1008,10 +1019,10 @@ main {
   
 }
 
-@media (max-width: 610px){
+@media (max-width: 609px){
 
   .landing-page-header-description{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
     margin-top: 25%;
@@ -1019,7 +1030,7 @@ main {
   }
 
   .landing-page-header{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
     margin-top: 29%;
@@ -1027,18 +1038,18 @@ main {
   }
 
   .landing-page-description{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
-    margin-top: 40%;
+    margin-top: 43%;
     margin-left: 0;
   }
 
   .landing-page-button{
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     display: flex;
-    margin-top: 50%;
+    margin-top: 57%;
   }
 
   .rituals-logo{
@@ -1052,6 +1063,10 @@ main {
 
   .landing-page-background{
     content:url(./Blender/Titelbild_Smartphone.png)
+  }
+
+  .product-card{
+    margin-right: 5px;
   }
 
 
