@@ -31,6 +31,19 @@ main {
 
 /*header*/
 
+.header{
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.5s ease-in-out;
+}
+
+.header.active {
+  top: 0;
+}
+
+
 .header-1{
     background-color: #242222;
     height: 32px;
@@ -55,7 +68,8 @@ main {
     height: 60px;
     left: 0px;
     top: 1px;
-    display:inherit;
+    display:flex;
+    justify-content: space-between;
 }
 
 .header-2-button::after {
@@ -81,7 +95,11 @@ main {
 .rituals-logo{
   float:left;
   padding-top: 25px;
-  padding-left: 5%;
+  padding-left: 50px;
+}
+
+.header-2-left{
+  display: flex;
 }
 
 .header-2-right{
@@ -129,16 +147,9 @@ main {
   background-position: center;
 }
 
-.landing-page-text{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .landing-page-header-description{
     position: absolute;
-    margin-top: 23%;
-    margin-left: 70px;
     color: #FFFFFF;
 }
 
@@ -186,6 +197,8 @@ main {
 .news-header-1, .news-header-2, .news-text, .news-button{
   text-align: center;
   padding-top: 5%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .news-button{
@@ -298,6 +311,9 @@ main {
 
 /*SHOP*/
 
+.shop-main{
+  padding-top: 60px;
+}
 .sticky-section {
   position: sticky;
   bottom: 0;
@@ -462,6 +478,11 @@ main {
   padding-top: 10%;
 }
 
+.product-description{
+  margin-top: 100px;
+  margin-right: 50px;
+}
+
 .product-collection {
   position: relative;
   overflow: hidden;
@@ -482,7 +503,6 @@ main {
 
 .product-container {
   display: flex;
-  padding-right: 5%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -526,6 +546,14 @@ main {
   height: 80%;
   margin-top: 12%;
   margin-left: 30%;
+}
+
+.product-card-4{
+  flex: 0 0 auto;
+  width: 300px;
+  height: 590px;
+  scroll-snap-align: start;
+
 }
 
 .tag {
@@ -596,7 +624,7 @@ main {
 
 .pre-btn {
   position: absolute;
-  left: 10px;
+  left:30px;
   top: 50%;
   transform: translateY(-50%);
   transform: rotate(180deg);
@@ -604,7 +632,7 @@ main {
 
 .nxt-btn {
   position: absolute;
-  right: 10px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -612,11 +640,27 @@ main {
 .pre-btn img,
 .nxt-btn img {
   opacity: 0.2;
+  z-index: 1;
 }
 
 .pre-btn:hover img,
 .nxt-btn:hover img {
   opacity: 1;
+  z-index: 1;
+}
+
+.nxt-btn:hover::before,
+.pre-btn:hover::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 .product-container::-webkit-scrollbar {
@@ -699,49 +743,44 @@ main {
 /* Restlicher CSS-Stil */
 
 .menu-icon {
+  padding-top: 13px;
+  padding-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   cursor: pointer;
-}
-
-.icon {
   position: relative;
-  width: 20px;
-  height: 2px;
-  background-color: #000;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 2;
 }
 
-.menu-icon.open .icon {
-  transform: rotate(45deg);
-}
-
-.menu-icon.open .icon:before,
-.menu-icon.open .icon:after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-.menu-icon.open .icon:before {
-  transform-origin: top left;
-}
-
-.menu-icon.open .icon:after {
-  transform-origin: bottom left;
+.menu-icon:active {
+  animation: fade-out 0.3s ease-in-out;
 }
 
 .menu {
   display: none;
   transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .menu.active {
   display: block;
   opacity: 1;
   animation: fade-in 0.3s ease-in-out;
+  height: 500px;
+  z-index: 3;
+  background: #1A1919;
+}
+
+.menu-icon.open .icon {
+  animation: fade-in 0.3s ease-in-out;
+  content: url(./Icons/x-icon.svg);
 }
 
 @keyframes fade-in {
@@ -750,6 +789,14 @@ main {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -781,7 +828,7 @@ main {
     display: none;
   }
 
-  .header-2-right{
+  .header-2-input, .header-2-right ul{
     display:none;
   }
 
@@ -789,6 +836,15 @@ main {
     display: flex;
   }
 
+  .rituals-logo{
+    padding-left: 10px;
+  }
+
+  .menu-inner{
+    display: grid;
+    gap: 20px;
+
+  }
   .landing-page-background{
     content:url(./Blender/Zylinder_hoch_3.png)
   }
@@ -798,6 +854,42 @@ main {
     grid-template-columns: 100%;
     width: 100%;
     padding-bottom: 70px;
+  }
+
+  .landing-page-logo{
+    display: none;
+  }
+
+  .landing-page-header-description{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 19%;
+    margin-left: 0;
+  }
+
+  .landing-page-header{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 22%;
+    margin-left: 0;
+  }
+
+  .landing-page-description{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 32%;
+    margin-left: 0;
+  }
+
+  .landing-page-button{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-left: 42%;
+    margin-left: 0;
   }
 
   .news{
@@ -835,10 +927,6 @@ main {
     display: none !important;
   }
 
-  .product-description{
-    margin-top: 100px;
-  }
-
   .shop-product-description{
     grid-template-columns: 100%;
   }
@@ -846,6 +934,10 @@ main {
   .footer-1{
     display: grid;
     height: auto;
+  }
+
+  .footer-1-content{
+    margin-bottom: 30px;
   }
   
   .e-mail{
@@ -887,6 +979,7 @@ main {
   .product-description{
     margin-top: 0;
     text-align: center;
+    margin-right: 0;
   }
 
   .product-text-1{
@@ -913,6 +1006,46 @@ main {
 }
 
 @media (max-width: 610px){
+
+  .landing-page-header-description{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 25%;
+    margin-left: 0;
+  }
+
+  .landing-page-header{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 29%;
+    margin-left: 0;
+  }
+
+  .landing-page-description{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 40%;
+    margin-left: 0;
+  }
+
+  .landing-page-button{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 50%;
+  }
+
+  .rituals-logo{
+    padding-left: 0;
+  }
+
+  .rituals-logo img{
+    width:150px;
+    height: 13px;
+  }
 
   .landing-page-background{
     content:url(./Blender/Titelbild_Smartphone.png)
@@ -961,6 +1094,7 @@ main {
 
   .footer-1-text{
     width: 100%;
+    padding-top: 20px;
   }
 
   .footer-1-content{
