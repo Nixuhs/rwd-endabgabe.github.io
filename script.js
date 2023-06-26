@@ -113,18 +113,24 @@ carouselContainer.addEventListener('mouseleave', startTimer);
 
 function handleScroll() {
   const header = document.querySelector(".header");
-  let lastScrollPosition = 0;
+  let isAtTop = true;
 
   window.addEventListener("scroll", function() {
     const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScrollPosition <= lastScrollPosition) {
-      header.classList.add("active");
-    }else {
-      header.classList.remove("active");
+    if (currentScrollPosition <= 0) {
+      // Der Benutzer ist ganz oben auf der Seite
+      if (!isAtTop) {
+        header.classList.add("active");
+        isAtTop = true;
+      }
+    } else {
+      // Der Benutzer hat gescrollt
+      if (isAtTop) {
+        header.classList.remove("active");
+        isAtTop = false;
+      }
     }
-
-    lastScrollPosition = currentScrollPosition;
   });
 }
 
