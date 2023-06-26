@@ -364,7 +364,6 @@
 
 .button-darkgrey-border{
 
-    position: absolute;
     width: 218.57px;
     height: 45.24px;
     background: #242222;
@@ -407,3 +406,8 @@
 
 /*responsive*/
 
+@media (min-width: 610px) {
+    .button-darkgrey-border{
+        position: absolute;
+    }
+}
